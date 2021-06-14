@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function ItemListContainer() {
+export default function ItemListContainer(props) {
 
 /*  const producto = [
         {id:1, name:'torta oreo', price: 1500},
@@ -16,6 +16,7 @@ export default function ItemListContainer() {
         <h6>Precio: $1500</h6>
         <h1>Torta Brownie</h1>
         <h6>Precio: $1000</h6>
+        <p>Esto es una {props.name}</p>
     </div>
   );
 }
