@@ -1,22 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
+import {Navbar} from './NavBar';
 
-export default function ItemListContainer(props) {
-
-/*  const producto = [
-        {id:1, name:'torta oreo', price: 1500},
-        {id:2, name:'torta brownie', price: 1000},
-        {id:3, name:'alfajores', price: 500},
-        {id:4, name:'cheesecake', price: 2500}
-    ];
-*/ 
+export const ItemListContainer = (props) =>{
+  
+  const [cart,setCart] = useState([]);
+  console.log(cart);
   return (
       
     <div>
-        <h1>Torta Oreo</h1>
+       
+        <h1>{props.greeting}</h1>
         <h6>Precio: $1500</h6>
         <h1>Torta Brownie</h1>
         <h6>Precio: $1000</h6>
-        <p>Esto es una {props.name}</p>
+        
+        
     </div>
+    /*
+      <Navbar cart={cart}/>
+      <button onClick={() => {setCart([...cart, {id:1,name:'torta', price: 1200}])}}>
+        Agregar a carrito
+        </button>
+    */
   );
 }
