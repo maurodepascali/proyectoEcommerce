@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from "../imagenes/logo.png";
 
 
-export const Navbar = (cart) => {
+export const NavBar = () => {
    
     return (
         
@@ -22,7 +22,7 @@ export const Navbar = (cart) => {
           <a className="nav-link">Contacto</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link">Carrito: {cart}</a>
+          <a className="nav-link">Carrito:</a>
         </li>
       </ul>
 
