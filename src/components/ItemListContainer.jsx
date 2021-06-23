@@ -7,9 +7,9 @@ import Item from './Item';
 
 export const ItemListContainer = () =>{
   
-
   
-const product = {
+ 
+const products = {
      id: 1,
       name: "TORTA OREO",
       price: 1500,
@@ -51,13 +51,13 @@ const product = {
               ))
           }
       </Grid>
- */
-
+ 
+<Cards name={product.name} price={product.price} stock={product.stock} image={product.image}/>*/
   return (
       
     <div>
        
-    <Cards name={product.name} price={product.price} stock={product.stock} image={product.image}/>
+   
   
     </div>
     /*
