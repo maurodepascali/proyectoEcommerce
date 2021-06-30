@@ -1,6 +1,12 @@
 
 import React, { useEffect, useState } from 'react';
 import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import Typography from '@material-ui/core/Typography';
+import { ShoppingCart } from '@material-ui/icons';
+import AddCircleIcon from '@material-ui/icons/AddCircle';
+import RemoveCircleIcon from '@material-ui/icons/RemoveCircle';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 export const Counter = ({stock, onAdd}) =>{
  
@@ -37,10 +43,17 @@ export const Counter = ({stock, onAdd}) =>{
         {
             stock>0 ?
             <>
-            <button onClick={restar}>-</button>
+            <IconButton onClick={restar}>
+                <RemoveCircleIcon/>
+            </IconButton>
             <input type="number" value={counter} onChange={manualChange} />
-            <button onClick={sumar}>+</button>
-        <Button onClick={onAdd} variant="primary">Comprar</Button>
+            <IconButton onClick={sumar}>
+                <AddCircleIcon/>
+            </IconButton>
+            <IconButton onClick={onAdd}>
+                <ShoppingCart fontSize='medium' />
+            </IconButton>
+        
         </>
         :
         <p>No hay mas disponibilidad</p>
