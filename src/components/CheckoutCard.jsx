@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
@@ -18,8 +17,9 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import accounting  from "accounting";
-import {Link} from "react-router-dom";
+import DeleteIcon from '@material-ui/icons/Delete';
 import {Counter} from './Counter';
+import CheckoutPage from './CheckoutPage';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -39,21 +39,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Product(props) {
+export default function CheckoutCard(props) {
+  const {name, image, id, price, stock } = props;
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
-  const { product, onAdd } = props;
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
 
-
-/* 
-  const onAdd = () => {
-    console.log(`compraste de articulos`)
-}
-*/
+  
   return (
     <Card className={classes.root}>
       <CardHeader
@@ -63,34 +58,26 @@ export default function Product(props) {
                 variant='h6'
                 color='textSecondary'
             >
-                {accounting.formatMoney(product.price, "$")}
+                {accounting.formatMoney(price, "$")}
             </Typography>
        
         }
-        title={product.name}
-        //subheader={(stock,"Unidades disponibles:")}
+        title={name}
+        subheader={(stock,"Unidades disponibles:")}
       />
       <CardMedia
         className={classes.media}
-        image={product.image}
-        title={product.name}
+        image={image}
+        title={name}
       />
     
-  
-    {/*<Counter stock={stock} onAdd={onAdd}/>*/}
-     
-     
-      <CardActions disableSpacing className={classes.cardAction}>
+   
 
-      <Link to="checkout-page">
-        <IconButton aria-label="Add to cart" onClick={() => onAdd(product)}>
-          <AddShoppingCartIcon />
+       <CardActions disableSpacing className={classes.cardAction}>
+        <IconButton aria-label="delete" onClick>
+          <DeleteIcon />
         </IconButton>
-        </Link>
       </CardActions>
-
-
     </Card>
-  
   );
 }
