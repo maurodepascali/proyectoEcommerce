@@ -1,7 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Products from './components/Products';
-import Product from './components/Product';
 import './styles/styles.css';
 import NavBar from './components/NavBar';
 import React, { useEffect, useState } from 'react';
