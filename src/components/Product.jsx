@@ -11,15 +11,10 @@ import Collapse from '@material-ui/core/Collapse';
 import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import { red } from '@material-ui/core/colors';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import accounting  from "accounting";
 import {Link} from "react-router-dom";
-import {Counter} from './Counter';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -77,7 +72,7 @@ export default function Product(props) {
       />
     
   
-    {/*<Counter stock={stock} onAdd={onAdd}/>*/}
+    
      
      
       <CardActions disableSpacing className={classes.cardAction}>
