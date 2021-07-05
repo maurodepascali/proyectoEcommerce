@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Product from './Product';
-
+import ProductDetailContainer from './ProductDetailContainer';
 
 
 
@@ -21,9 +21,9 @@ const useStyles = makeStyles((theme) => ({
 }
 }));
 
-export default function Products(props) {
+const Products = ({ onAdd, products }) => {
   const classes = useStyles();
-  const { products, onAdd } = props;
+ 
 
   return (
     
@@ -33,7 +33,9 @@ export default function Products(props) {
         {
           products.map((product) => (
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <Product key={product.id} product={product} onAdd={onAdd}/>
+              
+              <ProductDetailContainer key={product.id} product={product} onAdd={onAdd}/>
+           {/*   <Product key={product.id} product={product} onAdd={onAdd}/> */}
             </Grid>
             ))
         }
@@ -41,3 +43,4 @@ export default function Products(props) {
     </div>
   );
 }
+export default Products;

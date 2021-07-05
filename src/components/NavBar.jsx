@@ -36,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function NavBar(props) {
   const classes = useStyles();
+  const { product,  cart, onAdd, onRemove  } = props;
 
   return (
     <div className={classes.root}>
@@ -51,7 +52,7 @@ export default function NavBar(props) {
           <div className={classes.button}>
             <Link to="checkout-page">
               <IconButton>
-                <Badge badgeContent= {2} color="secondary"> 
+                <Badge badgeContent= {1} color="secondary"> 
                   <ShoppingCartIcon color="primary"/>
                 </Badge>
               </IconButton>
@@ -62,3 +63,4 @@ export default function NavBar(props) {
     </div>
   );
 }
+

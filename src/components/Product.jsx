@@ -34,22 +34,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Product(props) {
+const Product = ({ product, onAdd  }) =>  {
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
-  const { product, onAdd } = props;
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
+  
 
 
-/* 
-  const onAdd = () => {
-    console.log(`compraste de articulos`)
-}
-*/
   return (
+    <Link to={`/producto/${product.id}`}>
     <Card className={classes.root}>
       <CardHeader
         action={
@@ -70,22 +61,22 @@ export default function Product(props) {
         image={product.image}
         title={product.name}
       />
-    
+ 
   
     
      
-     
+    {/* 
       <CardActions disableSpacing className={classes.cardAction}>
 
-      <Link to="checkout-page">
         <IconButton aria-label="Add to cart" onClick={() => onAdd(product)}>
           <AddShoppingCartIcon />
         </IconButton>
-        </Link>
+       
       </CardActions>
-
+*/}
 
     </Card>
-  
+    </Link>
   );
 }
+export default Product;
