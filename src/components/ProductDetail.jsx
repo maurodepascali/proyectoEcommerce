@@ -5,7 +5,7 @@ import IconButton from '@material-ui/core/IconButton';
 import CardActions from '@material-ui/core/CardActions';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import Card from '@material-ui/core/Card';
-import ItemCount from "./ItemCount";
+
 import { Button } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
