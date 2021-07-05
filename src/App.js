@@ -46,7 +46,7 @@ function App() {
       <div>
       
         <Router>
-          <NavBar/>
+          <NavBar products={products} onAdd={onAdd}/>
           <Switch>
             <Route path="/checkout-page">
               <CheckoutPage 
