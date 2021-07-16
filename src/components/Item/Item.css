@@ -1,0 +1,25 @@
+.item{
+margin-top: 80px;
+margin-right: 20px;
+margin-left: 20px;
+}
+    .link-item{
+      text-decoration: none;
+    }
+  
+      .titulo-item{
+      padding: 10px;
+      font-size:30px;
+      text-align:center;
+      text-decoration: none;
+      color: black;
+     }
+  
+  
+     .imagen-item {
+      height: 200px;
+      width: 300px;   
+ 
+       }
+  
+       

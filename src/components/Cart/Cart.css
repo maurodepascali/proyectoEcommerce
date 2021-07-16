@@ -1,0 +1,18 @@
+.cart{
+margin-top: 80px;
+}
+
+.titulo{
+    padding: 10px;
+    font-size:30px;
+    text-align:center;
+    text-decoration: none;
+    color: black;
+}
+
+.setCart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
