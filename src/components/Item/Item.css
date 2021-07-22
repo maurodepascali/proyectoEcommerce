@@ -1,0 +1,34 @@
+.item{
+  overflow:hidden;
+  margin-top: 80px;
+  margin-right: 20px;
+  margin-left: 20px;
+  
+}
+
+.item:hover .imagen-item{
+  -webkit-transform:scale(-1);transform:scale(0.9);
+}
+.item:hover .titulo-item{
+  -webkit-transform:scale(-1);transform:scale(0.9);
+}
+    .link-item{
+      text-decoration: none;
+      color: black;
+    }
+  
+      .titulo-item{
+      padding: 10px;
+      font-size:30px;
+      text-align:center;
+      text-decoration: none;
+      color: black;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     }
+  
+     .imagen-item {
+      height: 200px;
+      width: 300px;   
+       }
+  
+       
