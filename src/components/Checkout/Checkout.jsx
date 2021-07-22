@@ -7,9 +7,63 @@ import Swal from 'sweetalert';
 import firebase from 'firebase/app';
 const Checkout = () => {
 
-    const {cart} = useCartContext();
-    const [form, setForm] = useState({email: '', name: '', phone:''});
+    const {cart, getTotal, createOrder} = useCartContext();
+    //const [buyer, setBuyer] = useState({email: '', name: '', phone:''});
+    const [name, setName] = useState(' ');
+    const [phone, setPhone] = useState(' ');
+    const [email, setEmail] = useState(' ');
 
+    /*
+    const handleInputChange = (e) => {
+        setBuyer({
+            ...buyer,
+            [e.target.name]: e.target.value
+        })
+    }
+
+    const createOrder = () => {
+        const db = getFirestore();
+
+        let items = cart.map(
+            (obj) => {
+                return {
+                    id: obj.item.id,
+                    title: obj.item.title,
+                    quantity: obj.item.price,
+            }
+            }
+        )
+
+        const newOrder = {
+            buyer,
+            items,
+            date: firebas.firestore.Timestamp.fromDate(newDate()),
+            total: getTotal,        }
+        };
+
+    const orders = db.collection("orders");
+    orders.add(newOrder).then((resp)=>{
+        console.log("Orden creada con exito");
+
+        let batch = db.batch();
+
+        let itemRef = db.collection("productos");
+        cart.forEach(
+            (obj) => {
+                batch.update(itemRef.doc(obj.item.id),{stock: obj.item.stock})
+            }
+        )
+        
+        batch.commit().then(() => {
+            useCartContext.clear();
+            setBuyer({name:'', phone: '', email: ''});
+        });
+    }).catch((error) => {
+        console.error('Error: ', err)
+    });
+    */
+
+/*
     const newOrder = {
         buyer:{
             name: name, 
@@ -22,7 +76,7 @@ const Checkout = () => {
         
     
 
-    /*
+    
     function dispatchOrder(newOrder){
         const db = getFirestore();
         const orders = db.collection("orders");
@@ -92,21 +146,23 @@ const Checkout = () => {
         */
 
     return (
-        <div className="containerCheckout">
+       <div className="containerCheckout">
             <h2 className="titleCheckout">COMPLETE SUS DATOS</h2>
                 <div className="form">
                     <form className="row">
                         <div className="col-md-3">
-                            <input type="text" placeholder="Nombre" className="form-control" value={name} onInput={(e) => {setName({...form, name: e.target.value})}}></input>
+                            <input type="text" placeholder="Nombre" className="form-control" onInput={(e) => {setName(e.target.value)}}></input>
                         </div>
                         <div className="col-md-13">
-                            <input type="tel" placeholder="Teléfono" className="form-control" value={phone} onInput={(e) => {setName({...form, phone: e.target.value})}}></input>
+                            <input type="tel" placeholder="Teléfono" className="form-control" onInput={(e) => {setPhone(e.target.value)}}></input>
                         </div>
                         <div className="col-md-3">
-                            <input type="email" placeholder="Correo electrónico" className="form-control" value={email} onInput={(e) => {setName({...form, email: e.target.value})}}></input>
+                            <input type="email" placeholder="Correo electrónico" className="form-control" onInput={(e) => {setEmail(e.target.value)}}></input>
                         </div>
                         <div className="buttonCheckout">
-                            <Button variant="contained" color="primary">Finalizar compra</Button>
+                            <Button variant="contained" color="primary" onClick={()=>{
+                        createOrder(name,phone,email)
+                        }}>Finalizar compra</Button>
                         </div>
                     </form>
                 </div>
