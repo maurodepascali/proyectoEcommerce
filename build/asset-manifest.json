@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/proyectoEcommerce/static/css/main.59746af5.chunk.css",
+    "main.js": "/proyectoEcommerce/static/js/main.9501065e.chunk.js",
+    "main.js.map": "/proyectoEcommerce/static/js/main.9501065e.chunk.js.map",
+    "runtime-main.js": "/proyectoEcommerce/static/js/runtime-main.5210ad93.js",
+    "runtime-main.js.map": "/proyectoEcommerce/static/js/runtime-main.5210ad93.js.map",
+    "static/js/2.79cb6136.chunk.js": "/proyectoEcommerce/static/js/2.79cb6136.chunk.js",
+    "static/js/2.79cb6136.chunk.js.map": "/proyectoEcommerce/static/js/2.79cb6136.chunk.js.map",
+    "static/js/3.c0314fb8.chunk.js": "/proyectoEcommerce/static/js/3.c0314fb8.chunk.js",
+    "static/js/3.c0314fb8.chunk.js.map": "/proyectoEcommerce/static/js/3.c0314fb8.chunk.js.map",
+    "index.html": "/proyectoEcommerce/index.html",
+    "static/css/main.59746af5.chunk.css.map": "/proyectoEcommerce/static/css/main.59746af5.chunk.css.map",
+    "static/js/2.79cb6136.chunk.js.LICENSE.txt": "/proyectoEcommerce/static/js/2.79cb6136.chunk.js.LICENSE.txt",
+    "static/media/macarons.9ab20878.jpg": "/proyectoEcommerce/static/media/macarons.9ab20878.jpg",
+    "static/media/vacio.f042828e.png": "/proyectoEcommerce/static/media/vacio.f042828e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5210ad93.js",
+    "static/js/2.79cb6136.chunk.js",
+    "static/css/main.59746af5.chunk.css",
+    "static/js/main.9501065e.chunk.js"
+  ]
+}
